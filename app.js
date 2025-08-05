@@ -36,3 +36,16 @@ function visualizaLista(arreglo) {
     }
     return;
 }
+
+//Función de sorteo
+function sortearAmigo() {
+    // Se valida que haya amigos disponibles
+    if (amigos == "") {
+        alert('Antes de hacer el sorteo debes ingresar el nombre de tus amigos');
+    } else {
+        let numeroGanador = Math.floor(Math.random()*(amigos.length));
+        let ganador = amigos[numeroGanador];
+        let textoGanador = document.getElementById('resultado');
+        textoGanador.innerHTML = `Felicidades ${ganador}, haz ganado el sorteo!!`
+    }
+}
